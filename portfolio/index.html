@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <title>市川大野</title>
+</head>
+<body>
+    <div class="container">
+        <h2>市川大野にようこそ</h2>
+    </div>
+    <script src="anime.min.js"></script>
+    <script>
+        const container = document.querySelector(".container");
+        for(var i=0; i<=30; i++) {
+            const blocks =document.createElement("div");
+            blocks.classList.add("block");
+            container.appendChild(blocks);
+        }
+        function animateBlocks(){
+            anime({
+                targets: ".block",
+                translateX: function(){
+                    return anime.random(-800, 700);
+                },
+                translateY: function(){
+                    return anime.random(-300, 300);
+                },
+                scale: function(){
+                    return anime.random(1, 5);
+                },
+                duration: 3000,
+                delay: anime.stagger(20),
+                complete: animateBlocks,
+            });
+        }
+
+        animateBlocks();
+
+    </script>
+
+    <div class="i1"><div class="wf-roundedmplus1c">市川大野ってどんなところ？</div></div>
+    <div class="i2">
+        <div class="parent">
+            <div class="child1">
+                <div class="SimpleFrame"><div class="stitch">千葉県市川市に位置し、<br>梨が有名で知名度や歴史から平成19年8月に<br>特許庁の地域団体商標登録<div class="wf-roundedmplus1c"><h3>「市川の梨」</h3></div>という地域ブランドの認証を受けました!<br><br>おいしい梨の直売所がいたるところにあり<br>時期によって様々な種類の梨が楽しめます!</div></div>
+            </div>
+            <div class="child2"><img src="image/map-chiba.png" width="300"></div>
+        </div>
+    </div>
+    <div class="i3"><div class="wf-roundedmplus1c">FieldMap</div></div>
+    <div class="i4">
+        <div class="parent">
+            <div class="child3"><img src="image/field2.jpg" width="500"></div>
+            <div class="child4">
+                <p>実際に私がこの町を探索して見つけたおいしいご飯屋さんを紹介します！</p>
+                <ul class="accordion-area">
+                    <li>
+                        <section>
+                          <h3 class="title">焼肉 光苑</h3>
+                          <div class="box">
+                                <div class="a">
+                                    <p>access: 〒272-0805 千葉県市川市大野町３丁目１２４−１７</p>
+                                    <p>open: 17:00~23:00 木曜定休日</p>
+                                    <p>TEL: 047-339-9646</p>
+                                </div>
+                          </div>
+                        </section>
+                      </li>
+                      <li>
+                        <section>
+                          <h3 class="title">中華料理 蓮山飯店</h3>
+                          <div class="box">
+                                <div class="a">
+                                    <p>access: 〒272-0805 千葉県市川市大野町３丁目１８２</p>
+                                    <p>open: 11:00~13:30, 16:30~18:30 水曜定休日</p>
+                                    <p>TEL: 047-337-4465</p>
+                                </div>
+                          </div>
+                        </section>
+                      </li>
+                    </ul>
+                    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+                    <script src="aco.js"></script>
+            </div>
+        </div>
+        <a></a>
+    </div>
+</body>
+</html>
